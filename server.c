@@ -3,7 +3,8 @@
 #include <sys/socket.h>
 #include <sys/types.h>
 
-int main() {
+int main()
+{
   int sock0;
   struct sockaddr_in addr;
   struct sockaddr_in client;
@@ -12,7 +13,7 @@ int main() {
   /*
     ソケットの作成
     第一引数: domain, プロトコルファミリー指定 (UNIX, IP, IPV6)
-    第二引数: type, 通信方式の指定
+    第二引数: type, 通信方式の指定(TCP, UDP)
     第三引数: protocol,
       プロトコルファミリーの種類ごとに1つのプロトコルのみをサポートする場合は0を指定
     返り値: socketfd, ファイルディスクリプタ
